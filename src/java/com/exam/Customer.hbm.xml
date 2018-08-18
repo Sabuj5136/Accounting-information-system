@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2018 11:43:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Customer" table="customer" catalog="informationsystem" optimistic-lock="version">
+        <id name="customerId" type="string">
+            <column name="customerId" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="companyName" type="string">
+            <column name="companyName" length="45" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="45" />
+        </property>
+        <property name="receivable" type="java.lang.Integer">
+            <column name="receivable" />
+        </property>
+    </class>
+</hibernate-mapping>

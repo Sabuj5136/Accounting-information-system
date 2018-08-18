@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f93a9363-e2af-4610-97a1-0427f63e444b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="p1" class="java.sql.Timestamp"/>
+	<queryString>
+		<![CDATA[SELECT
+     sales.`invoiceId` AS sales_invoiceId,
+     sales.`transactionId` AS sales_transactionId,
+     sales.`customerId` AS sales_customerId,
+     sales.`customerName` AS sales_customerName,
+     sales.`phone` AS sales_phone,
+     sales.`grossSales` AS sales_grossSales,
+     sales.`discount` AS sales_discount,
+     sales.`transport` AS sales_transport,
+     sales.`netSales` AS sales_netSales,
+     sales.`payment` AS sales_payment,
+     sales.`receivable` AS sales_receivable,
+     sales.`date` AS sales_date
+FROM
+     `sales` sales
+WHERE
+     date = $P{p1}]]>
+	</queryString>
+	<field name="sales_invoiceId" class="java.lang.String"/>
+	<field name="sales_transactionId" class="java.lang.String"/>
+	<field name="sales_customerId" class="java.lang.String"/>
+	<field name="sales_customerName" class="java.lang.String"/>
+	<field name="sales_phone" class="java.lang.String"/>
+	<field name="sales_grossSales" class="java.lang.Integer"/>
+	<field name="sales_discount" class="java.lang.Integer"/>
+	<field name="sales_transport" class="java.lang.Integer"/>
+	<field name="sales_netSales" class="java.lang.Integer"/>
+	<field name="sales_payment" class="java.lang.Integer"/>
+	<field name="sales_receivable" class="java.lang.Integer"/>
+	<field name="sales_date" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="2" width="100" height="20" uuid="ffa9bf07-f33a-4987-987b-03cda612d748"/>
+				<text><![CDATA[sales_invoiceId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="2" width="100" height="20" uuid="e3b82ea3-01f5-4f20-b1d1-759c8bca16c5"/>
+				<text><![CDATA[sales_customerName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="2" width="100" height="20" uuid="93880445-b085-4199-bc03-6640280fb4be"/>
+				<text><![CDATA[sales_grossSales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="2" width="100" height="20" uuid="f6f1c141-26ca-4d82-96e2-6530a44e9df3"/>
+				<text><![CDATA[sales_discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="2" width="100" height="20" uuid="e3403c30-7cfd-4581-8edc-170fb7be9324"/>
+				<text><![CDATA[sales_transport]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="18" width="100" height="20" uuid="1734dedb-1f08-4a6a-a94d-a9acf8c85fe3"/>
+				<textFieldExpression><![CDATA[$F{sales_invoiceId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="17" width="100" height="20" uuid="9bf272cb-1fb8-4019-8187-a2ce4c693b6a"/>
+				<textFieldExpression><![CDATA[$F{sales_customerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="20" width="100" height="20" uuid="f0a6e069-b289-42fe-b957-1edcb89889f7"/>
+				<textFieldExpression><![CDATA[$F{sales_grossSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="21" width="100" height="20" uuid="eca100d0-0cb1-4b77-a733-8b3183706fe0"/>
+				<textFieldExpression><![CDATA[$F{sales_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="22" width="100" height="20" uuid="ed8ca193-cbf8-4ab9-aa04-61a6248d591c"/>
+				<textFieldExpression><![CDATA[$F{sales_transport}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

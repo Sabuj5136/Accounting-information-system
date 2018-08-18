@@ -1,0 +1,160 @@
+#header_top{
+	background-color: #026058;
+	color: #ffffff;
+	padding: 10px 0;
+	border-bottom: 1px solid #000000;
+}
+#header_top a{
+	color: #ffffff;
+}
+.navbar-form {
+    margin-top: 0;
+}
+.glyphicon{
+	padding-right: 5px;
+}
+#header_section{
+	background-color: #048277;
+}
+#header_section img{
+	width: 280px;
+	height: 75px;
+}
+.navbar-default {
+    background-color: #048277;
+    border-color: #048277;
+	margin-top: 20px;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover {
+    background: #fff;
+    color: #000;
+	border-radius: 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+	font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    background: #fff;
+    color: #000;
+	border-radius: 5px;
+}
+#slider_main{
+	margin-bottom: 30px;
+}
+#left_sidebar{}
+#left_sidebar ul{
+	margin-left: -38px;
+}
+#left_sidebar ul li{
+	list-style: none;
+	background-color: #dadada;
+	border-bottom: 1px solid #ffffff;
+	padding: 7px;
+}
+#left_sidebar ul li:hover{
+	background-color: #048277;
+}
+#left_sidebar ul li a{
+	display: block;
+}
+#left_sidebar ul li a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+#front_page_fourth img{
+	width: 250px;
+	border: 1px solid #dadada;
+	padding: 5px;
+}
+#front_page_fifth{
+	margin-top: 30px;
+}
+#footer_newsletter{
+	padding-bottom: 40px;
+}
+#footer_newsletter h2{
+	text-align: center;
+	margin: 20px 0;
+}
+#footer_newsletter .form-group {
+    padding-right: 5px;
+}
+#footer_widget{
+	background-color: #2E2D2D;
+	border-bottom: 5px solid #FA482E;
+}
+#footer_widget h2{
+	font-size: 24px; 
+	color: #ffffff;
+}
+#footer_widget ul li{
+	margin-bottom: 10px;
+}
+#footer_widget ul li a{
+	color: #ffffff;
+}
+#footer_copyright{
+	background-color: #2E2D2D;
+	color: #ffffff;
+	padding: 15px 0;
+}
+#footer_copyright ul li{
+	list-style: none;
+	display: inline;
+	margin-right: 8px;
+}
+#footer_copyright ul li a{
+	color: #ffffff;
+}
+#about_first{
+	margin-right: 15px;
+	float: left;
+}
+.photo_gallery h2{
+	text-align: center;
+}
+.photo_gallery ul li{
+	list-style: none;
+	display: inline-block;
+}
+.photo_gallery img{
+	width: 250px;
+	height: 180px;
+	margin-right: 12px;
+	margin-bottom: 15px;
+}
+#footer_widget img{
+	width: 115px;
+	height: 150px;
+	margin-left: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2018 11:43:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Product" table="product" catalog="informationsystem" optimistic-lock="version">
+        <id name="productId" type="string">
+            <column name="productId" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="productName" type="string">
+            <column name="productName" length="45" />
+        </property>
+        <property name="stock" type="java.lang.Integer">
+            <column name="stock" />
+        </property>
+        <property name="costPerUnit" type="java.lang.Integer">
+            <column name="costPerUnit" />
+        </property>
+        <property name="totalCostPrice" type="java.lang.Integer">
+            <column name="totalCostPrice" />
+        </property>
+        <property name="salesPerUnit" type="java.lang.Integer">
+            <column name="salesPerUnit" />
+        </property>
+        <property name="totalSalesPrice" type="java.lang.Integer">
+            <column name="totalSalesPrice" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="45" />
+        </property>
+        <property name="brand" type="string">
+            <column name="brand" length="45" />
+        </property>
+        <property name="serial" type="java.lang.Integer">
+            <column name="serial" />
+        </property>
+    </class>
+</hibernate-mapping>

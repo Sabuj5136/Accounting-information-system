@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1d1f94ba-0bd5-40c5-9696-51735baee015">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="24"/>
+	<property name="ireport.y" value="9"/>
+	<parameter name="p1" class="java.sql.Timestamp"/>
+	<parameter name="p2" class="java.sql.Timestamp"/>
+	<queryString>
+		<![CDATA[SELECT
+     sales.`invoiceId` AS sales_invoiceId,
+     sales.`transactionId` AS sales_transactionId,
+     sales.`customerId` AS sales_customerId,
+     sales.`customerName` AS sales_customerName,
+     sales.`phone` AS sales_phone,
+     sales.`grossSales` AS sales_grossSales,
+     sales.`discount` AS sales_discount,
+     sales.`transport` AS sales_transport,
+     sales.`netSales` AS sales_netSales,
+     sales.`payment` AS sales_payment,
+     sales.`receivable` AS sales_receivable,
+     sales.`date` AS sales_date
+FROM
+     `sales` sales
+WHERE
+     date BETWEEN $P{p1} AND $P{p2}]]>
+	</queryString>
+	<field name="sales_invoiceId" class="java.lang.String"/>
+	<field name="sales_transactionId" class="java.lang.String"/>
+	<field name="sales_customerId" class="java.lang.String"/>
+	<field name="sales_customerName" class="java.lang.String"/>
+	<field name="sales_phone" class="java.lang.String"/>
+	<field name="sales_grossSales" class="java.lang.Integer"/>
+	<field name="sales_discount" class="java.lang.Integer"/>
+	<field name="sales_transport" class="java.lang.Integer"/>
+	<field name="sales_netSales" class="java.lang.Integer"/>
+	<field name="sales_payment" class="java.lang.Integer"/>
+	<field name="sales_receivable" class="java.lang.Integer"/>
+	<field name="sales_date" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="0" width="210" height="25" uuid="6f0b2271-2b8a-4b69-b684-94cc8ca41546"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Legacy Electronics Ltd]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="159" y="0" width="293" height="20" uuid="b22b30cf-236a-4562-a080-c642c59aa666"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kazi nazrul islam avenue,dhaka-1206,Bangladesh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="20" width="274" height="20" uuid="0ac0665a-f900-4e78-9dd6-dd0176f33884"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:legacy3456@gmail.com,Mobile:01779-703487]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="2" width="68" height="20" uuid="c8c938f4-9d16-47ec-beeb-389f1d66f169"/>
+				<text><![CDATA[Invoice id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="2" width="55" height="20" uuid="a02f6412-6992-4033-a53a-00445b25078e"/>
+				<text><![CDATA[Total Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="2" width="60" height="20" uuid="32cdd91c-4b5a-4b71-b9e5-b4f4dc1d4345"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="2" width="65" height="20" uuid="e66457a4-f7b5-4e3e-b3b3-445608d806b4"/>
+				<text><![CDATA[Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="2" width="52" height="20" uuid="a2c9279d-2613-4794-866d-85a08e21bac5"/>
+				<text><![CDATA[Net Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="2" width="81" height="20" uuid="f9501b71-a151-410b-9a44-797f336783e2"/>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="2" width="81" height="20" uuid="dcd94ebc-378e-4ec6-985e-f38f539fc39b"/>
+				<text><![CDATA[Receivable]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="10" width="68" height="20" uuid="d020d9fe-7a2b-4621-b9e1-ef8ce3867772"/>
+				<textFieldExpression><![CDATA[$F{sales_invoiceId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="10" width="55" height="20" uuid="44acad81-c398-4285-82ba-be46486d6702"/>
+				<textFieldExpression><![CDATA[$F{sales_grossSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="5" width="50" height="20" uuid="c90f5175-b747-4c4f-bb62-716c74136da5"/>
+				<textFieldExpression><![CDATA[$F{sales_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="5" width="65" height="20" uuid="0116a263-69a6-4c55-a81f-05b70b23a4e9"/>
+				<textFieldExpression><![CDATA[$F{sales_transport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="5" width="52" height="20" uuid="4a984c91-2150-4bcb-92e6-dccca11eba4e"/>
+				<textFieldExpression><![CDATA[$F{sales_netSales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="7" width="81" height="20" uuid="9cc5b139-c63e-4b76-bc0e-77cf67cf9bec"/>
+				<textFieldExpression><![CDATA[$F{sales_payment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="8" width="81" height="20" uuid="cb88ced8-04c9-4af8-9b87-82703b98375d"/>
+				<textFieldExpression><![CDATA[$F{sales_receivable}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="5" y="34" width="550" height="1" uuid="3501fff6-737b-4c67-b4f2-f47ed1184643"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

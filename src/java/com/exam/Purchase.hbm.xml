@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2018 11:43:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Purchase" table="purchase" catalog="informationsystem" optimistic-lock="version">
+        <id name="purchaseId" type="string">
+            <column name="purchaseId" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="transactionId" type="string">
+            <column name="transactionId" length="45" />
+        </property>
+        <property name="supplierId" type="string">
+            <column name="supplierId" length="45" />
+        </property>
+        <property name="productId" type="string">
+            <column name="productId" length="45" />
+        </property>
+        <property name="productName" type="string">
+            <column name="productName" length="45" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="45" />
+        </property>
+        <property name="brand" type="string">
+            <column name="brand" length="45" />
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" />
+        </property>
+        <property name="costPerUnit" type="java.lang.Integer">
+            <column name="costPerUnit" />
+        </property>
+        <property name="totalCostPrice" type="java.lang.Integer">
+            <column name="totalCostPrice" />
+        </property>
+        <property name="transportCost" type="java.lang.Integer">
+            <column name="transportCost" />
+        </property>
+        <property name="otherCost" type="java.lang.Integer">
+            <column name="otherCost" />
+        </property>
+        <property name="totalProductCost" type="java.lang.Integer">
+            <column name="totalProductCost" />
+        </property>
+        <property name="payment" type="java.lang.Integer">
+            <column name="payment" />
+        </property>
+        <property name="payable" type="java.lang.Integer">
+            <column name="payable" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

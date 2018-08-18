@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2018 11:43:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Transaction" table="transaction" catalog="informationsystem" optimistic-lock="version">
+        <id name="transactionId" type="string">
+            <column name="transactionId" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="amount" type="java.lang.Integer">
+            <column name="amount" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+         <property name="cash" type="java.lang.Integer">
+            <column name="cash" />
+        </property>
+         <property name="nonCash" type="java.lang.Integer">
+            <column name="nonCash" />
+        </property>
+    </class>
+</hibernate-mapping>
